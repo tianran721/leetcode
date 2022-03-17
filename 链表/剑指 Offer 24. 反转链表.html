@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<img src="pic/24.png" alt="">
+<script>
+    /**
+     * Definition for singly-linked list.
+     * function ListNode(val) {
+     *     this.val = val;
+     *     this.next = null;
+     * }
+     */
+    /**
+     * @param {ListNode} head
+     * @return {ListNode}
+     */
+    var reverseList = function(head) {
+
+        let prev = null
+        let curr = head
+        while(curr) {
+            // 保存curr 的下一个节点
+            const temp = curr.next
+            // 当前节点指向前一个节点
+            curr.next = prev
+            // 前一个指向当前
+            prev = curr
+            // 当前指向下一个
+            curr = temp
+        }
+        return prev
+    };
+
+</script>
+</body>
+</html>
