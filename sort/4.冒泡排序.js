@@ -1,3 +1,4 @@
+// TODO
 var sortArray = function(nums) {
     if(!nums)return nums;
     for(let i = 0; i < nums.length -1; i++){
